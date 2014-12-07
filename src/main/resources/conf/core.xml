@@ -123,6 +123,7 @@ GENERAL NOTES
     <!--The Multiplexor implementation to use. [String: org.aitools.programd.multiplexor.FlatFileMultiplexor]-->
     <!-- <entry key="programd.multiplexor-implementation">org.aitools.programd.multiplexor.FlatFileMultiplexor</entry> -->
     <entry key="programd.multiplexor-classname">org.aitools.programd.multiplexor.DBMultiplexor</entry>
+  
     
     <!--The directory in which to save flat-file predicates (FFM only). [URL: /var/programd/ffm]-->
     <entry key="programd.multiplexor.ffm-dir">/var/programd/ffm</entry>

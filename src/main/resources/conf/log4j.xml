@@ -111,10 +111,10 @@
 
     <!--Database logging for all bots (no botid filter applied)-->
     <appender name="DBChatlog" class="org.apache.log4j.jdbc.JDBCAppender">
-        <param name="URL" value="jdbc:mysql:///programdbot" />
-        <param name="Driver" value="com.mysql.jdbc.Driver" />
-        <param name="User" value="user" />
-        <param name="Password" value="password" />
+        <param name="URL" value="jdbc:postgresql://127.0.0.1:5432/botdb" />
+        <param name="Driver" value="org.postgresql.Driver" />
+        <param name="User" value="programd" />
+        <param name="Password" value="programd" />
         <layout class="org.aitools.programd.logging.DBChatLogLayout"/>
         <filter class="org.aitools.programd.logging.ChatLogEventFilter" />
     </appender>
@@ -126,8 +126,8 @@
         <appender-ref ref="stdout" />
         <appender-ref ref="stderr" />
         <appender-ref ref="activitylog" />
-        <!--<appender-ref ref="DBChatlog" />-->
-        <appender-ref ref="XMLChatlog-SampleBot-only" />
+        <appender-ref ref="DBChatlog" />
+        <!--<appender-ref ref="XMLChatlog-SampleBot-only" /> -->
         <appender-ref ref="TxtChatlog" />
     </logger>
     
