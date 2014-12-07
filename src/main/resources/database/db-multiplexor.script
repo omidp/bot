@@ -1,0 +1,32 @@
+-- DROP TABLE predicates;
+
+CREATE TABLE predicates
+(
+  userid character varying NOT NULL,
+  botid character varying NOT NULL,
+  name character varying,
+  value text,
+  CONSTRAINT predicates_pkey PRIMARY KEY (userid, botid)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE predicates
+  OWNER TO programd;
+  
+  
+-- DROP TABLE users;
+
+CREATE TABLE users
+(
+  userid character varying NOT NULL,
+  password character varying,
+  botid character varying,
+  CONSTRAINT users_pkey PRIMARY KEY (userid)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE users
+  OWNER TO programd;
+  

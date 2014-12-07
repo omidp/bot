@@ -341,7 +341,7 @@ public class CoreSettings extends Settings
 
         setNodemapperImplementation(this.properties.getProperty("programd.nodemapper-implementation", "org.aitools.programd.graph.TwoOptimalNodemaster"));
 
-        setMultiplexorImplementation(this.properties.getProperty("programd.multiplexor-implementation", "org.aitools.programd.multiplexor.FlatFileMultiplexor"));
+        setMultiplexorImplementation(this.properties.getProperty("programd.multiplexor-implementation", "org.aitools.programd.multiplexor.DBMultiplexor"));
 
         setMultiplexorFfmDir(URLTools.contextualize(this.path, this.properties.getProperty("programd.multiplexor.ffm-dir", "/var/programd/ffm")));
 

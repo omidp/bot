@@ -1,0 +1,17 @@
+-- DROP TABLE chatlog;
+
+CREATE TABLE chatlog
+(
+  id serial NOT NULL,
+  "timestamp" timestamp with time zone,
+  userid character varying,
+  botid character varying,
+  input text,
+  response text,
+  CONSTRAINT chatlog_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE chatlog
+  OWNER TO programd;
